@@ -145,11 +145,11 @@ export default {
 
 .back {
   text-align: center;
-  background: url('@/assets/backmobile.jpg') no-repeat center center scroll;
+  background: url('@/assets/backmobile.jpg') no-repeat center left scroll;
   background-size: cover;
   color: white;
   padding: 20px;
-  min-height: 100vh;
+  min-height: 100vh; /* Cambiado a min-height para permitir expansión */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,10 +163,11 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex: 1;
 }
 
 header {
-  margin-top: 5px;
+  margin-top: 0px;
   position: relative;
 }
 
@@ -183,10 +184,10 @@ header {
   border-radius: 10px;
   padding: 20px;
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 325px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .giveaway-image {
@@ -201,6 +202,7 @@ header {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
+  margin-bottom: 20px; /* Add margin below the countdown */
 }
 
 .countdown div {
@@ -220,7 +222,7 @@ h2 {
 
 p {
   font-size: 1em;
-  margin: 10px 0;
+  margin: 1px 0;
 }
 
 .form-group {
@@ -230,12 +232,12 @@ p {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
 input[type="number"] {
-  width: 40%;
+  width: 50%;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -247,12 +249,12 @@ button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 10px 10px;
+  padding: 10px 20px;
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: -5px;
+  margin-top: 15px;
 }
 
 button:hover {
@@ -260,7 +262,7 @@ button:hover {
 }
 
 footer {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .social-icons {
@@ -278,46 +280,5 @@ footer {
 
 .social-icons i:hover {
   color: #ccc;
-}
-
-/* Estilos para el modal */
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  text-align: left;
-  color: black;
-  border-radius: 10px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 </style>
